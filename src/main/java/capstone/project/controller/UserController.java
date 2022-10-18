@@ -5,10 +5,7 @@ import capstone.project.model.UserRequest;
 import capstone.project.service.UserService;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
@@ -19,6 +16,25 @@ public class UserController {
     @PutMapping("/signup")
     public UserDTO registerUser(@RequestBody @NonNull UserRequest userRequest) {
         return userService.saveUser(userRequest);
+    }
+    @PostMapping("/login")
+    public UserDTO loginUser(@RequestBody @NonNull UserRequest userRequest) {
+        return userService.loginUser(userRequest);
+    }
+
+    @PostMapping("/loginByProvider/{email}")
+    public UserDTO loginByProvider(@PathVariable String email) {
+        return userService.loginByProvider(email);
+    }
+
+    @DeleteMapping("/{email}")
+    public String deleteUser(@PathVariable String email) {
+        return userService.deleteUser(email);
+    }
+
+    @PostMapping("/update/{oldEmail}")
+    public UserDTO updateUser(@PathVariable String oldEmail, @RequestBody UserRequest userRequest) {
+        return userService.updateUser(oldEmail, userRequest);
     }
 
 
