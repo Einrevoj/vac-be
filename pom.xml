@@ -15,9 +15,9 @@
     <description>project</description>
     <properties>
 <!--        <java.version>19</java.version>-->
-        <psql.url>jdbc:postgresql://database-2.chpzw3uvtrlc.ap-east-1.rds.amazonaws.com:5432/capstone</psql.url>
-        <psql.user>postgres</psql.user>
-        <psql.password>myfirstproject</psql.password>
+        <psql.url>jdbc:postgresql://ec2-3-213-66-35.compute-1.amazonaws.com:5432/d3tcpbs5qd1kcu</psql.url>
+        <psql.user>cdrxiiqtsdfjbz</psql.user>
+        <psql.password>7477413c88cc2a56cc40b915cfe61d287d2df24365d6f08e6afaeab8b8c4d78a</psql.password>
     </properties>
     <dependencies>
         <dependency>

@@ -1,10 +1,8 @@
 package capstone.project.controller;
 
-import capstone.project.dto.MemberListDTO;
+
 import capstone.project.dto.ProfileDTO;
-import capstone.project.model.MemberListRequest;
 import capstone.project.model.ProfileRequest;
-import capstone.project.service.MemberListService;
 import capstone.project.service.ProfileService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
