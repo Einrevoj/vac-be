@@ -23,9 +23,6 @@ import java.util.UUID;
 public class UserEntity {
     @Id
     private UUID userId;
-    private String firstName;
-    private String middleName;
-    private String lastName;
     private String email;
     private String password;
     private String confirmPassword;

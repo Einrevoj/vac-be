@@ -39,6 +39,7 @@ public class UserService {
                 .userId(UUID.randomUUID())
                 .email(newUser.getEmail())
                 .password(newUser.getPassword())
+                .confirmPassword(newUser.getConfirmPassword())
                 .createdDate(dateTimeUtil.currentDate())
                 .modifiedDate(dateTimeUtil.currentDate())
                 .build();

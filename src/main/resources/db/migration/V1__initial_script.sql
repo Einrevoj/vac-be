@@ -3,9 +3,6 @@ CREATE SCHEMA capstone;
 
 CREATE TABLE capstone.USERS (
                              user_id uuid,
-                             first_name varchar(150),
-                             middle_name varchar(150),
-                             last_Name varchar(150),
                              email varchar(150),
                              password varchar(150),
                              confirm_password varchar(150),
@@ -85,7 +82,6 @@ CREATE TABLE capstone.MEMBERLIST (
                                       last_name varchar(150),
                                       contact_number varchar(150),
                                       status varchar(150),
-
                                       created_date TIMESTAMP WITH TIME ZONE,
                                       modified_date TIMESTAMP WITH TIME ZONE,
                                       PRIMARY KEY (memberlist_id)
