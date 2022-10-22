@@ -21,7 +21,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class ReportIncomeService {
 
-    private ReportIncomeRepository reportIncomeRepository;
+    private final ReportIncomeRepository reportIncomeRepository;
 
     private final ModelMapper modelMapper;
     private final DateTimeUtil dateTimeUtil;

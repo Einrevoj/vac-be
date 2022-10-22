@@ -11,8 +11,8 @@ import java.util.UUID;
 @Repository
 public interface InvestmentRepository  extends JpaRepository<InvestmentEntity, BigInteger> {
 
-    InvestmentEntity findByInvestmentId(UUID investmentId);
+    InvestmentEntity findByinvestmentId(UUID investmentId);
 
     @Transactional
-    void deleteByInvestmentId(UUID investmentId);
+    void deleteByinvestmentId(UUID investmentId);
 }

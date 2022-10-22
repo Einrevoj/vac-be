@@ -65,11 +65,10 @@ CREATE TABLE capstone.EXPENSE (
 
 CREATE TABLE capstone.INVESTMENT (
                                      investment_id uuid,
-                                     invested_to varchar(150),
-                                     Platform_used varchar(150),
+                                     investment_to varchar(150),
+                                     platform_used varchar(150),
                                      withdrawn_from varchar(150),
                                      amount varchar(150),
-                                     image_link varchar(150),
                                      proof_trans varchar(150),
                                      created_date TIMESTAMP WITH TIME ZONE,
                                      modified_date TIMESTAMP WITH TIME ZONE,

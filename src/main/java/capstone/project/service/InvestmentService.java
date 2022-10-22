@@ -21,7 +21,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class InvestmentService {
 
-    private InvestmentRepository investmentRepository;
+   private final InvestmentRepository investmentRepository;
     private final ModelMapper modelMapper;
     private final DateTimeUtil dateTimeUtil;
 
@@ -41,7 +41,7 @@ public class InvestmentService {
     public InvestmentDTO getInvestment(UUID investmentId) {
 
         // Get profile from database
-        InvestmentEntity investment = investmentRepository.findByInvestmentId(investmentId);
+        InvestmentEntity investment = investmentRepository.findByinvestmentId(investmentId);
 
         if (investment == null) throw new UserAlreadyExist("Investment doesn't exist");
 
@@ -54,9 +54,9 @@ public class InvestmentService {
                 .builder()
                 .investmentId(UUID.randomUUID())
                 .investmentTo(newInvestment.getInvestmentTo())
-                .amount(newInvestment.getAmount())
+                .platformUsed(newInvestment.getPlatformUsed())
                 .withdrawnFrom(newInvestment.getWithdrawnFrom())
-                .platFormUsed(newInvestment.getPlatFormUsed())
+                .amount(newInvestment.getAmount())
                 .proofTrans(newInvestment.getProofTrans())
                 .createdDate(dateTimeUtil.currentDate())
                 .modifiedDate(dateTimeUtil.currentDate())
@@ -67,14 +67,15 @@ public class InvestmentService {
     public List<InvestmentDTO> deleteInvestment(UUID investmentId) {
 
         // Get income
-        InvestmentEntity investment = investmentRepository.findByInvestmentId(investmentId);
+        InvestmentEntity product = investmentRepository.findByinvestmentId(investmentId);
 
         // Check if income exist
-        if(investment == null) throw new UserAlreadyExist("Investment doesn't exist");
+        if(product == null) throw new UserAlreadyExist("Investment doesn't exist");
 
         // Delete income
-        investmentRepository.deleteByInvestmentId(investmentId);
+        investmentRepository.deleteByinvestmentId(investmentId);
 
         return getAllInvestment();
     }
+
 }

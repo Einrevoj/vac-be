@@ -21,7 +21,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class ReportExpenseService {
 
-    private ReportExpenseRepository reportExpenseRepository;
+    private final ReportExpenseRepository reportExpenseRepository;
     private final ModelMapper modelMapper;
     private final DateTimeUtil dateTimeUtil;
 

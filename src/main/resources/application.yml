@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://ec2-3-213-66-35.compute-1.amazonaws.com:5432/d3tcpbs5qd1kcu
-    username: cdrxiiqtsdfjbz
-    password: 7477413c88cc2a56cc40b915cfe61d287d2df24365d6f08e6afaeab8b8c4d78a
+    url: jdbc:postgresql://database-1.cg523l06vmzk.ap-southeast-1.rds.amazonaws.com:5432/capstone
+    username: postgres
+    password: myfirstproject
   servlet:
     multipart:
       max-file-size: 50MB

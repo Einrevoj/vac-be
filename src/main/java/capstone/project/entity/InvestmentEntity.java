@@ -24,7 +24,7 @@ public class InvestmentEntity {
     @Id
     private UUID investmentId;
     private String investmentTo;
-    private String platFormUsed;
+    private String platformUsed;
     private String withdrawnFrom;
     private String amount;
     private String proofTrans;
